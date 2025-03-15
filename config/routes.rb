@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home/index'
   get("/", { :controller => "misc", :action => "homepage" })
 
   get("/directors/youngest", { :controller => "directors", :action => "max_dob" })
@@ -12,4 +13,6 @@ Rails.application.routes.draw do
   
   get("/actors", { :controller => "actors", :action => "index" })
   get("/actors/:path_id", { :controller => "actors", :action => "show" })
+
+
 end
